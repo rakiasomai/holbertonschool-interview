@@ -4,13 +4,13 @@
 
 def canUnlockAll(boxes):
     """ def canunlockAll """
-    open = [0]
     if len(boxes) == 0:
         return False
     if type(boxes) is not list:
         return False
     else:
         lock = len(boxes)
+    open = [0]    
     for y in open:
         for i in boxes[y]:
             if i not in open:
