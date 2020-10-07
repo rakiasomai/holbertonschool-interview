@@ -29,7 +29,7 @@ free(spg);
 }
 /**
  * lvl - a function that augumente level.
- * @spg: this is a sting. 
+ * @spg: this is a sting.
  * @level: The level to augument.
  * Return: a string.
  */
@@ -47,8 +47,8 @@ return (build(spg, (int)size));
  */
 char *build(char *spg, int size)
 {
-int a;    
-int length; 
+int a;
+int length;
 int t;
 char *b;
 char *c;
@@ -130,7 +130,7 @@ char *spg;
 int length;
 int y;
 int a;
-length = ((size + 1) * size) + 1;
+length = ((size + 1) * size) +1;
 spg = malloc(sizeof(char) * length);
 a = 0;
 for (y = 0; b[y]; y++)
