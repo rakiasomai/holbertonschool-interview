@@ -28,4 +28,6 @@ void binary_tree_print(const binary_tree_t *);
 
 heap_t *heap_insert(heap_t **root, int value);
 
+heap_t *insert(heap_t *root);
+
 #endif
