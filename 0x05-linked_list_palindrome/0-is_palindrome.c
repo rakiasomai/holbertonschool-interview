@@ -39,14 +39,14 @@ int *inarray(listint_t *head, int *list)
 	return (a);
 }
 /**
- * is_palindrome - function to check the list. 
+ * is_palindrome - function to check the list.
  * @head: this is a pointer.
  * Return: 0 if no, 1 if yes
  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
-	int i = listlen(current);
+	int i = list(current);
 	int *l, *a;
 	int mid1 = 0, mid2 = 0, y = 0;
 
