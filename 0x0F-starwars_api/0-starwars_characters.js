@@ -1,8 +1,10 @@
 #!/usr/bin/node
-const request = require('request');
+const util = require('util');
+const request = util.promisify(require('request'));
+const args = process.argv[2];
 
-async function checkcaracters () {
-  const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
+async function checkcaracters (star) {
+  const url = 'https://swapi-api.hbtn.io/api/films/' + star ;
   let data = await (await request(url)).body;
   data = JSON.parse(data);
   const check = data.check;
