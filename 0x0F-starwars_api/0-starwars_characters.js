@@ -10,7 +10,7 @@ async function checkcharacters (star) {
   data = JSON.parse(data);
   const characters = data.characters;
   for (let y = 0; y < characters.length; y++) {
-    const urlCharacter = letter[y];
+    const urlCharacter = characters[y];
     let letter = await (await request(urlCharacter)).body;
     letter = JSON.parse(letter);
     console.log(letter.name);
