@@ -1,19 +1,20 @@
 #!/usr/bin/node
+
 const util = require('util');
 const request = util.promisify(require('request'));
-const args = process.argv.slice(2);
+const num = process.argv.slice(2);
 
-async function starwarsCharacters (film) {
-  const url = 'https://swapi-api.hbtn.io/api/films/' + film;
+async function checkcharacters (star) {
+  const url = 'https://swapi-api.hbtn.io/api/films/' + star;
   let data = await (await request(url)).body;
   data = JSON.parse(data);
   const characters = data.characters;
-  for (let index = 0; index < characters.length; index++) {
-    const urlCharacter = characters[index];
+  for (let y = 0; y < characters.length; y++) {
+    const urlCharacter = characters[y];
     let character = await (await request(urlCharacter)).body;
     character = JSON.parse(character);
     console.log(character.name);
   }
 }
 
-starwarsCharacters(args[0]);
+checkcharacters(num[0]);
