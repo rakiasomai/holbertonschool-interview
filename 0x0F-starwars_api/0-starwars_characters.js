@@ -2,7 +2,7 @@
 
 const util = require('util');
 const request = util.promisify(require('request'));
-const num = process.argv.slice(2);
+const num = process.argv[2];
 
 async function checkcharacters (star) {
   const url = 'https://swapi-api.hbtn.io/api/films/' + star;
