@@ -26,4 +26,3 @@ def rain(walls):
                 rain_water += right_border - walls[high_border]
             high_border -= 1
     return rain_water
-        
