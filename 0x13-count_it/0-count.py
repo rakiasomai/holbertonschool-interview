@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' Module Count '''
+''' Module Counts '''
 
 import requests
 
