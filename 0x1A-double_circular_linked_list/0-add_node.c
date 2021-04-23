@@ -43,7 +43,7 @@ List *add_node_begin(List **list, char *str)
 		return (NULL);
 
 	if (*list == NULL)
-		return one(list, str);
+		return (one(list, str));
 
 	m = *list;
 	n = malloc(sizeof(List));
@@ -83,7 +83,7 @@ List *add_node_end(List **list, char *str)
 		return (NULL);
 
 	if (*list == NULL)
-		return one(list, str);
+		return (one(list, str));
 
 	m = *list;
 	n = malloc(sizeof(List));
